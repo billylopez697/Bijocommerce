@@ -1,0 +1,85 @@
+body {
+    align-items: center;
+    position: relative;
+}
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.navi {
+    background: whitesmoke;
+    border-color: #68B7F7;
+}
+
+.btn1 {
+    background: #2D4F6B;
+}
+
+.main {
+    background: url(../img/card2.png)no-repeat;
+    ;
+    background-size: cover;
+    min-height: 650px;
+    opacity: 0.9;
+}
+
+@media (max-width: 650px) {
+    .main {
+        max-width: 650px;
+        background: url('../img/f.png');
+        background-repeat: repeat-x;
+    }
+    .background-overlay {
+        max-width: 650px;
+    }
+}
+
+.background-overlay {
+    background-color: rgba(221, 193, 193, 0.3);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.social a {
+    font-size: 32px;
+}
+
+.titulo {
+    font-size: 200%;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 4;
+    color: #0878d4;
+    background: transparent;
+}
+
+.subtitulo {
+    font-size: 150%;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-box-sizing: border-box;
+    /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box;
+    /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+    z-index: 4;
+    color: rgb(0%, 50%, 38%);
+    background: transparent;
+}
+
+.hey {
+    background-color: rgba(221, 193, 193, 0.3);
+}
