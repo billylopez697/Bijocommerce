@@ -1,0 +1,50 @@
+<section class="pt-5 social container" style="margin-top:50px;" id="contac">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-12 col-md-10 col-lg-7 pb-5">
+                <div class="card border-primary rounded-0">
+                    <div class="card-header p-0">
+                        <div class=" text-white text-center py-2" style="background: #2D4F6B;">
+                            <h3><i class="fa fa-envelope"></i> Registrar Produtos</h3>
+                            <p class="m-0">Bijocommerce</p>
+                        </div>
+                    </div>
+                    <form [formGroup]="FormularioP">
+                        <div class="card-body p-3">
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                    </div>
+                                    <input type="text" formControlName="titulo" class="form-control" name="nombre" placeholder="Nombre Del Produto" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                    </div>
+                                    <input type="text" formControlName="descripcion" class="form-control" name="nombre" placeholder="DescripcionP" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                    </div>
+                                    <input type="file" class="form-control" name="nombre" placeholder="Suba Imagen Del Producto" required>
+                                </div>
+                            </div>
+
+                            <div class="text-center ">
+                                <button type="button " [disabled]="!FormularioP.valid" (click)="GuardarProducto() " class="btn btn-block rounded-0 py- text-white " style="background: #2D4F6B; ">Guardar Producto</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

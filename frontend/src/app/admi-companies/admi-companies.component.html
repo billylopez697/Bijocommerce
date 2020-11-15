@@ -1,0 +1,17 @@
+<app-nav-empresas [nombreE]="nombreE"></app-nav-empresas>
+<nav class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="mt-5">
+            <a [routerLink]="['/admi-compani',nombreE]">ver mi pagina</a>
+        </div>
+        <div>
+        </div>
+    </div>
+</nav>
+<div>
+    <app-modal [nombreE]="nombreE"></app-modal>
+    <app-produ></app-produ>
+</div>
+<div>
