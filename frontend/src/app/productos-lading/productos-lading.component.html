@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="card ml-5 mt-5 border border-info" style="width:20rem;" *ngFor="let pro of Pagina">
+            <img class="card-img-top" [src]="pro.img" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{pro.nombrempresa}}</h5>
+                <p class="card-text">{{pro.descripcion}}</p>
+                <a [routerLink]="['/admi-compani','coca']">ver mi pagina</a>
+            </div>
+        </div>
+    </div>
+</div>

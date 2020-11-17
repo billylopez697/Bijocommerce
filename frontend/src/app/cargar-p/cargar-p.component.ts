@@ -10,7 +10,7 @@ export class CargarPComponent implements OnInit {
     nombrempresa:'pepsi',
     nav:false,
     foo:true,
-    descripcion:"vendemos frescos",
+    descripcion:"Pepsi, también conocida como Pepsi-Cola, es una gaseosa de cola originaria en los Estados Unidos y producida por la compañía PepsiCo.",
     producto:[{img:"../../assets/img/coca.jpg",
                descripcion:"Prueba nuestros deliciosos frescos",
                titulo:"Pepsi sub Zero"
@@ -21,12 +21,13 @@ export class CargarPComponent implements OnInit {
               }
               ],
     imagen:[],
+    img:"../../assets/img/logo de la pepsi.jpg"
   },
   {
     nombrempresa:'coca',
     nav:true,
     foo:false,
-    descripcion:"vendemos frescos mas ricos",
+    descripcion:"Coca-Cola, conocida comúnmente como Coca en muchos países hispanohablantes (en inglés Coke), es una bebida gaseosa.",
     producto:[{
         img:"../../assets/img/coca.jpg",
         descripcion:"Prueba nuestros deliciosos frescos",
@@ -39,7 +40,8 @@ export class CargarPComponent implements OnInit {
       }
 
       ],
-    imagen:[]
+    imagen:[],
+    img:"../../assets/img/logo de la coca.png"
   }
 ]
 

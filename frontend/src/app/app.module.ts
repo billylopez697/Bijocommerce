@@ -17,6 +17,8 @@ import { ProduComponent } from './produ/produ.component';
 import { SliderComponent } from './slider/slider.component';
 import { ModalComponent } from './modal/modal.component';
 import { CargarPComponent } from './cargar-p/cargar-p.component';
+import { LadingComponent } from './lading/lading.component';
+import { ProductosLadingComponent } from './productos-lading/productos-lading.component';
 
 
 const routes: Routes = [
@@ -24,6 +26,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path:'admi-compani',component:AdmiCompaniesComponent},
   { path:'admi-compani/:id',component:PaginaComponent},
+  { path:'lading',component:LadingComponent},
 ];
 
 @NgModule({
@@ -40,7 +43,9 @@ const routes: Routes = [
     ProduComponent,
     SliderComponent,
     ModalComponent,
-    CargarPComponent
+    CargarPComponent,
+    LadingComponent,
+    ProductosLadingComponent
   ],
   imports: [
     BrowserModule,
