@@ -17,16 +17,18 @@ export class AdmiCompaniesComponent implements OnInit {
   constructor() {
 
   }
-  Formulario= new FormGroup({
-    titulo:new FormControl('',[Validators.required]),
-    descripcion:new FormControl('',[Validators.required]),
+  CrearPagina= new FormGroup({
+    ColorNav:new FormControl('',[Validators.required]),
+    ColorLetra:new FormControl('',[Validators.required]),
   })
 
 
   ngOnInit(): void {
-    console.log(this.empresas.nombreE);
+    console.log(this.CrearPagina);
 
   }
-
+enviar(){
+  console.log(this.CrearPagina.value);
+}
 
 }

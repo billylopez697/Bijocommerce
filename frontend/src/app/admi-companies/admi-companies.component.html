@@ -1,17 +1,45 @@
 <app-nav-empresas [nombreE]="nombreE"></app-nav-empresas>
-<nav class="container-fluid mt-5">
-    <div class="row">
-        <div class="col-lg-3">
-        </div>
-        <div class="mt-5">
-            <a [routerLink]="['/admi-compani',nombreE]">ver mi pagina</a>
-        </div>
-        <div>
-        </div>
-    </div>
-</nav>
-<div>
+<div class="container" style="margin-top:5rem;">
     <app-modal [nombreE]="nombreE"></app-modal>
-    <app-produ></app-produ>
+    <button type="button" class="btn btn-outline-primary ml-2 mr-2"><a [routerLink]="['/admi-compani',nombreE]">ver mi pagina</a></button>
+    <app-produ [nombreE]="nombreE"></app-produ>
+    <app-video [nombreE]="nombreE"></app-video>
 </div>
-<div>
+<div class="container mt-5" class="letra">
+    <h1>Agregar Pagina</h1>
+    <form [formGroup]="CrearPagina">
+        <label>Elija el color para la barra Nav</label>
+        <br>
+        <input type="color" formControlName="ColorNav">
+        <br>
+        <label>Color de letra</label>
+        <br>
+        <input type="color" formControlName="ColorLetra">
+        <br>
+        <br>
+        <button type="button" (click)="enviar()">Enviar</button>
+    </form>
+    <select>
+
+      <option style="font-family:Arial;"value="Arial">Arial</option>
+      <option style="font-family:Verdana;" value="Verdana">Verdana</option>
+      <option style="font-family:Franklin Gothic Medium;"value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+      <option style="font-family:Impact;"value="Impact">Impact</option>
+      <option style="font-family:Haettenschweiler;"value="Haettenschweiler">Haettenschweiler</option>
+      <option style="font-family:Times New Roman;"value="Times New Roman">Times New Roman</option>
+      <option style="font-family:Helvetica;"value="Helvetica">Helvetica</option>
+      <option style="font-family:Courier New;"value="Courier New">Courier New</option>
+      <option style="font-family:Courier;"value="Courier ">Courier</option>
+      <option style="font-family:Arial Narrow;" value="Arial Narrow">Arial Narrow</option>
+      <option style="font-family:Candara;"value="Candara">Candara</option>
+      <option style="font-family:Ginebra"value="Ginebra">Ginebra</option>
+      <option style="font-family:Garamond;"value="Garamond">Garamond</option>
+      <option style="font-family:Perpetua"value="Perpetua">Perpetua</option>
+      <option style="font-family:Monaco;"value="Monaco">Monaco</option>
+      <option style="font-family:Didot;"value="Didot">Didot</option>
+      <option style="font-family:Brush Script MT;"value="Brush Script MT">Brush Script MT</option>
+      <option style="font-family:Lucida Bright;"value="Lucida Bright">Lucida Bright</option>
+      <option style="font-family:Copperplate;"value="Copperplate">Copperplate</option>
+      </select>
+
+</div>

@@ -1,0 +1,11 @@
+<h2>videos</h2>
+<div class="container mt-5">
+    <div class="row mt-2" *ngFor="let vid of video">
+        <div class="col-lg-2">
+        </div>
+        <div class="embed-responsive embed-responsive-16by9 col-lg-8">
+            <iframe width="560" height="315" class="embed-responsive-item" [src]="getVideoIframe(vid.enlace)" allowfullscreen></iframe>
+        </div>
+        {{vid.descripcion}}
+    </div>
+</div>
