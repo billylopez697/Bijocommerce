@@ -11,24 +11,24 @@ import{FormControl,FormGroup, Validators}  from '@angular/forms';
 export class AdmiCompaniesComponent implements OnInit {
   empresas=JSON.parse(sessionStorage.getItem('empresas'));
   nombreE=this.empresas.nombreE;
-
+  edit=false;
 
 
   constructor() {
-
   }
-  CrearPagina= new FormGroup({
-    ColorNav:new FormControl('',[Validators.required]),
-    ColorLetra:new FormControl('',[Validators.required]),
-  })
 
 
   ngOnInit(): void {
-    console.log(this.CrearPagina);
+  }
+  editar(){
+    if(this.edit==true){
+      this.edit=false;
+
+    }else{
+      this.edit=true;
+    }
 
   }
-enviar(){
-  console.log(this.CrearPagina.value);
-}
+
 
 }
