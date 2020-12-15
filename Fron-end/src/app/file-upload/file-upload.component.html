@@ -1,0 +1,14 @@
+<form [formGroup]='imageform' (ngSubmit)="onSubmit()">
+    <div class="input file">
+        <input type="file" placeholder="File" (change)="onfileChange($event)" formControlName="file">
+        <img *ngIf="image" class="img-fluid img-thumbnail image " src="{{image}}">
+    </div>
+    <input type="text" placeholder="Nombre Del Producto" formControlName="name" class="name-picture mt-2">
+    <input type="text" placeholder="Descripcion Del Producto" formControlName="producto" class="name-picture mt-2">
+    <input type="text" placeholder="Ingrese el precio" formControlName="precio" class="name-picture mt-2">
+    <input type="text" placeholder="Ingrese la  cantidad del producto" formControlName="cantidad" class="name-picture mt-2">
+    <input type="text" style="display:none" placeholder="../../assets/img/LADI.jpg" formControlName="urlimg" class="name-picture mt-2 ">
+    <br>
+
+    <button type="submit " class="btn btn-outline-primary btn-lg btn-block " [disabled]="!imageform.valid ">Enviar</button>
+</form>

@@ -1,0 +1,54 @@
+<app-navadministrador></app-navadministrador>
+<div class="container mt-5 pt-1">
+    <h3 class="mt-5">Bienvenido {{nombre}}</h3>
+    <ul class="nav nav-tabs">
+        <li><a (click)="perfil()" class="ml-2">Mis Datos</a></li>
+        <li><a (click)="administar()" class="ml-2">Mas Acciones</a></li>
+        <br>
+    </ul>
+</div>
+
+<div id="Perfil" *ngIf="elejir=='perfil'">
+    <div class="container">
+        <div class="row my-2">
+            <div class="col-lg-8 order-lg-2">
+                <div class="tab-content py-4">
+                    <div class="tab-pane active" id="profile">
+                        <h5 class="mb-3">Perfil</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Nombre</h6>
+                                <p>
+                                    {{nombre}} {{apellido}}
+                                </p>
+                                <h6>Celular</h6>
+                                <p>
+                                    {{celular}}
+                                </p>
+
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Usuario</h6>
+                                <p>{{usuario}}</p>
+                                <h6>Tipo Usuario</h6>
+                                <p>Administrador</p>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-lg-1 text-center">
+                <img src="../../assets/img/vegutea.jpg" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+                <h6 class="mt-2">{{nombre}}</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="elejir=='Administar'">
+    <div class="container mt-2 p-1">
+        <button (click)="registrar()" class="btn btn-info ml-2">Crear Administrador</button>
+        <button (click)="listado()" class="btn btn-info ml-2">Ver Empresas</button>
+    </div>
+</div>

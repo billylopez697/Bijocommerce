@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+<header class="masthead" style="margin-top:50px; color: blue;">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="font-weight-light">BIJOCOMMERCE</h1>
+                <p class="lead ">
+                    CREA TU PROPIA PAGINA WEB, PARA CUALQUIER TIPO DE NEGOCIO. CON LAS MEJORES PROMOCIONES Y CALIDAD DEL MERCADO</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <div class="card p-3 pt-4 mt-3 card border-success " #myselect (click)="pagina(myselect.id)" *ngFor="let empresa of empresas" style="height:400px" [id]="empresa._id">
+        <div class="row mt-2">
+            <div class="col-md-5">
+                <img [src]="empresa.img" class="w-100">
+            </div>
+            <div class="col-md-5 px-3">
+                <div class="card-block px-3">
+                    <h4 class="card-title text-center">{{empresa.nombre}}</h4>
+                    <p class="card-text">{{empresa.descripcion}}</p>
+                    <a href="#" class="btn btn1 text-dark "><button  #myselect (click)='myselect.id'>ver mi pagina</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<app-nav></app-nav>
+<div class="container mt-5 pt-1">
+    <h3 class="mt-5">Bienvenido</h3>
+    <ul class="nav nav-tabs">
+        <li><a class="ml-2" (click)="perfil()">Mis Datos</a></li>
+        <li><a class="ml-2" (click)="administar()">Mas Acciones</a></li>
+        <br>
+    </ul>
+</div>
+
+<div id="Perfil" *ngIf="elejir=='perfil'">
+    <div class="container">
+        <div class="row my-2">
+            <div class="col-lg-8 order-lg-2">
+                <div class="tab-content py-4">
+                    <div class="tab-pane active" id="profile">
+                        <h5 class="mb-3">Perfil</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Nombre</h6>
+                                <p>{{nombre}}</p>
+                                <h6>Descripcion</h6>
+                                <p>{{descripcion}}
+                                </p>
+
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Usuario</h6>
+                                <p></p>
+                                <h6>Tipo Usuario</h6>
+                                <p>Empresas</p>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-lg-1 text-center">
+                <img src={{imagen}} class="mx-auto img-fluid img-circle d-block" alt="avatar">
+                <h6 class="mt-2"></h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="elejir=='Administar'">
+    <div class="container mt-2 p-1">
+        <button (click)="rutas4()" class="btn btn-info ml-2">Agregar Imagen</button>
+        <button (click)="rutas3()" class="btn btn-info ml-2">Agregar Producto</button>
+        <button type="button" class="btn btn-info ml-2" (click)="Modallogin()">Agregar Video</button>
+        <button class=" btn btn-info ml-2 ">Ver Estadistica</button>
+    </div>
+</div>
+
+
+<ng-template #modalvideo let-modal>
+    <div class="modal-header" style="background-color: #f11515;">
+        <h4 class="modal-title " style="color: aliceblue;" id="modal-basic-title">Login</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+<span aria-hidden="true">&times;</span>
+</button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="Formulario">
+            <div class="form-group">
+                <input type="text" formControlName="usuario" class="form-control" id="txt-nombre" placeholder="Ingrese Usuario">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="password" class="form-control" id="txt-descripcion" placeholder="Ingrese Contraseña">
+            </div>
+            <button type="button" class="btn btn-outline-dark text-center" (click)="enviar()">Enviar</button>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Cerrar')">Cerrar</button>
+    </div>
+</ng-template>

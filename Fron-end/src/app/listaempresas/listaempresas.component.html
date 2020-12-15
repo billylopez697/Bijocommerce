@@ -1,0 +1,21 @@
+<app-navadministrador></app-navadministrador>
+<div class="container p-2 mt-5">
+    <table class="table mt-3">
+        <thead class="" style="background: #1ECEC1;">
+            <tr>
+                <th scope="col">Nombre De La Empresa</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Supespender</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let empresa of empresas">
+            <tr>
+                <td>{{empresa.nombre}}</td>
+                <td>{{empresa.descripcion}}</td>
+                <td><button class="btnt btn-info" [id]="empresa._id" #myselect (click)="suspender(myselect.id)">Suspender</button></td>
+                <td><button class="btnt btn-danger" [id]="empresa._id" #myselect (click)="eliminar(myselect.id)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
